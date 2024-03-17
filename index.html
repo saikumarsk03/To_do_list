@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b3348ae33f.js" crossorigin="anonymous"></script>
+    <title>To-do-list</title>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="video/bg1.mp4" type="video/mp4">
+    </video>
+    
+    <main>
+        <h1>TO-Do List</h1><br>
+        <div id="container">
+            <form action="">
+                <input type="text" value="" id="textinput">
+            </form>
+            <button id="addbtn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <span id="uncompleted" onclick="hideShow()" class="hidden">&nbsp;&nbsp;Completed</span>
+        <span id="completed" onclick="hideShow()">Un-Completed</span>
+        <div id="count">Count : 0</div>
+        <div id="todolist" class="hidden">
+        </div>
+        <div id="container2">    
+        </div>
+        <button id="deleteall">delete All</button>
+        <button id="completeall" class="hidden">Complete All</button>
+        <script src="script.js"></script>
+        <script>
+      
+        </script>
+    </main>
+
+</body>
+</html>

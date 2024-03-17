@@ -1,0 +1,211 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2EFE5;
+    font-family: cursive;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#addbtn {
+    padding: 8px;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    outline: none;
+}
+
+/* Styles for the container */
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+/* Input style */
+input {
+    margin-left: 10px;
+    width: 300px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+}
+
+/* Hidden class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Styling for the buttons */
+span,
+i {
+    cursor: pointer;
+}
+
+/* Styling for the completed/uncompleted buttons */
+#uncompleted,
+#completed {
+    width: 150px;
+    position: absolute;
+    padding: 5px;
+    margin-left: 80px;
+    background-color: #EEEEEE;
+    padding-left: 30px;
+    border-radius: 10px;
+    transition: background-color 0.5s, box-shadow 0.2s ease-in;
+}
+
+#uncompleted:hover,
+#completed:hover {
+    background-color: #e3e3e3;
+}
+
+#count {
+    font-weight: bolder;
+    color: black;
+    user-select: none;
+    margin-left: 280px;
+    margin-bottom: -30px;
+    margin-top: 30px;
+}
+
+/* Styling for the todo content */
+.todocontent {
+    color: #0f0f0f;
+    margin: 5px;
+    font-size: large;
+    padding-left: 10px;
+    border-bottom: 1px solid rgb(49, 54, 63);
+    border-radius: 10px;
+    box-shadow: 5px 2px 10px rgb(49, 54, 63);
+}
+
+.todocontent i,
+.container2 i {
+    position: absolute;
+}
+
+.oicon {
+    margin-top: 30px;
+}
+
+.todocontent div,
+.container2 div {
+    margin-left: 30px;
+}
+
+/* Styling for the todo list and container 2 */
+#todolist,
+#container2 {
+    background: rgb(173, 173, 173);
+    background: linear-gradient(
+        90deg,
+        rgba(173, 173, 173, 1) 0%,
+        rgba(238, 238, 238, 1) 100%
+    );
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px #31363f;
+    top: 50px;
+    overflow-y: scroll;
+    width: 380px;
+    height: 420px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: -35px;
+    position: relative;
+}
+
+/* Remove scrollbar */
+#todolist::-webkit-scrollbar,
+#container2::-webkit-scrollbar {
+    display: none;
+}
+
+.trashh {
+    padding-top: 10px;
+    margin-left: 250px;
+}
+
+.fadeout {
+    animation: fadeoutt 1.5s ease;
+}
+
+@keyframes fadeoutt {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Styling for the main container */
+main {
+    user-select: none;
+    padding-top: 50px;
+    background: transparent;
+    width: 450px;
+    height: 700px;
+    padding-left: 60px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 0px; /* Center vertically */
+}
+
+/* Styling for the delete all and complete all buttons */
+#deleteall,
+#completeall {
+    background-color: #eeeeee;
+    font-family: cursive;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    padding: 10px;
+    width: 200px;
+    margin-top: 6px;
+    margin-left: 55px;
+    position: absolute;
+    transition: box-shadow 0.2s ease-in;
+}
+
+/* Hover effect for buttons */
+#uncompleted:hover,
+#completed:hover,
+#completeall:hover,
+#deleteall:hover {
+    box-shadow: 7px 7px 10px #31363f;
+}
+
+/* Active effect for buttons */
+#uncompleted:active,
+#completed:active,
+#deleteall:active,
+#completeall:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+/* Hover effect for todo content */
+.todocontent:hover {
+    transform: translateY(2px);
+}
